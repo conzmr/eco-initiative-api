@@ -1,0 +1,24 @@
+{
+  "name": "Administrator",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "accessType": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "blogEntries": {
+      "type": "hasMany",
+      "model": "BlogEntry",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,73 @@
+{
+  "name": "EcoUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "paternal-surname": {
+      "type": "string",
+      "required": true
+    },
+    "maternal-surname": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "int-number": {
+      "type": "string"
+    },
+    "postal-code": {
+      "type": "number",
+      "required": true
+    },
+    "suburb": {
+      "type": "string",
+      "required": true
+    },
+    "cellphone-number": {
+      "type": "string",
+      "required": true
+    },
+    "house-phone-number": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "municipalities": {
+      "type": "belongsTo",
+      "model": "Municipalities",
+      "foreignKey": ""
+    },
+    "signatures": {
+      "type": "hasMany",
+      "model": "Signature",
+      "foreignKey": ""
+    },
+    "states": {
+      "type": "belongsTo",
+      "model": "States",
+      "foreignKey": ""
+    },
+    "identifications": {
+      "type": "hasOne",
+      "model": "Identification",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

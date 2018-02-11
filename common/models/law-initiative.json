@@ -1,0 +1,46 @@
+{
+  "name": "LawInitiative",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "Goal": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "signatures": {
+      "type": "hasMany",
+      "model": "Signature",
+      "foreignKey": ""
+    },
+    "stages": {
+      "type": "hasMany",
+      "model": "Stages",
+      "foreignKey": ""
+    },
+    "states": {
+      "type": "belongsTo",
+      "model": "States",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

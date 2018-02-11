@@ -1,0 +1,36 @@
+{
+  "name": "BlogEntry",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "lastEdition": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "administrator": {
+      "type": "belongsTo",
+      "model": "Administrator",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

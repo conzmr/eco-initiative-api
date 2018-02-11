@@ -1,0 +1,58 @@
+{
+  "name": "candidates",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "patrimonial-declaration": {
+      "type": "string"
+    },
+    "interests-declaration": {
+      "type": "string"
+    },
+    "fiscal-declaration": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "paternal-surname": {
+      "type": "string",
+      "required": true
+    },
+    "maternal-surname": {
+      "type": "string",
+      "required": true
+    },
+    "about": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "lawInitiatives": {
+      "type": "hasMany",
+      "model": "LawInitiative",
+      "foreignKey": ""
+    },
+    "section": {
+      "type": "belongsTo",
+      "model": "Section",
+      "foreignKey": ""
+    },
+    "signatures": {
+      "type": "hasMany",
+      "model": "Signature",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

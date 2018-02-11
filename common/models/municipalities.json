@@ -1,0 +1,44 @@
+{
+  "name": "Municipalities",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "states": {
+      "type": "belongsTo",
+      "model": "States",
+      "foreignKey": ""
+    },
+    "sections": {
+      "type": "hasMany",
+      "model": "Section",
+      "foreignKey": ""
+    },
+    "districts": {
+      "type": "belongsTo",
+      "model": "Districts",
+      "foreignKey": ""
+    },
+    "ecoUsers": {
+      "type": "hasMany",
+      "model": "EcoUser",
+      "foreignKey": ""
+    },
+    "identifications": {
+      "type": "hasMany",
+      "model": "Identification",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

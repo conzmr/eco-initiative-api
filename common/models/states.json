@@ -1,0 +1,34 @@
+{
+  "name": "States",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "districts": {
+      "type": "belongsTo",
+      "model": "Districts",
+      "foreignKey": ""
+    },
+    "municipalities": {
+      "type": "hasMany",
+      "model": "Municipalities",
+      "foreignKey": ""
+    },
+    "sections": {
+      "type": "hasMany",
+      "model": "Section",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

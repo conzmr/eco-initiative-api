@@ -1,0 +1,39 @@
+{
+  "name": "Signature",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "number": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "lawInitiative": {
+      "type": "belongsTo",
+      "model": "LawInitiative",
+      "foreignKey": ""
+    },
+    "ecoUser": {
+      "type": "belongsTo",
+      "model": "EcoUser",
+      "foreignKey": ""
+    },
+    "candidates": {
+      "type": "belongsTo",
+      "model": "candidates",
+      "foreignKey": ""
+    },
+    "identification": {
+      "type": "belongsTo",
+      "model": "Identification",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Identification",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ocr": {
+      "type": "string",
+      "required": true
+    },
+    "ce": {
+      "type": "string",
+      "required": true
+    },
+    "ne": {
+      "type": "number",
+      "required": true
+    },
+    "front-picture": {
+      "type": "string"
+    },
+    "back-picture": {
+      "type": "string"
+    },
+    "signature-picture": {
+      "type": "string"
+    },
+    "consent-picture": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ecoUser": {
+      "type": "belongsTo",
+      "model": "EcoUser",
+      "foreignKey": ""
+    },
+    "signatures": {
+      "type": "hasMany",
+      "model": "Signature",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

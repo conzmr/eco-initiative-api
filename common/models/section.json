@@ -1,0 +1,43 @@
+{
+  "name": "Section",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "number": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "districts": {
+      "type": "belongsTo",
+      "model": "Districts",
+      "foreignKey": ""
+    },
+    "municipalities": {
+      "type": "belongsTo",
+      "model": "Municipalities",
+      "foreignKey": ""
+    },
+    "states": {
+      "type": "belongsTo",
+      "model": "States",
+      "foreignKey": ""
+    },
+    "candidates": {
+      "type": "hasMany",
+      "model": "candidates",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
