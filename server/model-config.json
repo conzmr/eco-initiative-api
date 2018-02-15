@@ -43,7 +43,7 @@
     "dataSource": "mongodb",
     "public": true
   },
-  "candidates": {
+  "Candidates": {
     "dataSource": "mongodb",
     "public": true
   },

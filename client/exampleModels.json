@@ -1,0 +1,17 @@
+ADMINISTRATOR
+{
+  "accessType": "restricted",
+  "name": "Héctor Ruvalcaba Cruz",
+  "username": "hruvalcaba",
+  "email": "hruvalcaba@gmail.com",
+  "emailVerified": true,
+  "password": "ruvalcaba"
+}
+{
+  "accessType": "complete",
+  "name": "Carlota Padilla",
+  "username": "cpadilla",
+  "email": "carl_pad@hotmail.com",
+  "emailVerified": true,
+  "password": "Madrigal1821*"
+}

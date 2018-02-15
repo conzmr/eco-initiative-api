@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#getEcoUsers").click(function(){
+      $.ajax({
+          url: "http://localhost:3000/api/EcoUsers"
+      }).then(function(data) {
+        $('#output').text(JSON.stringify(data))
+         console.log(data)
+      }, function(err){
+        $('#output').text(JSON.stringify(err))
+        console.log(err);
+      });
+    });
+
+    $("#addEcoUser").click(function(){
+      $.ajax({
+      url: 'http://localhost:3000/api/EcoUsers',
+      dataType: 'json',
+      type: 'post',
+      contentType: 'application/json',
+      data: $('#textarea').val(),
+      processData: false,
+      success: function( data, textStatus, jQxhr ){
+        console.log("YAY "+JSON.stringify( data ))
+        $('#output').text(JSON.stringify(data))
+      },
+      error: function( jqXhr, textStatus, errorThrown ){
+        $('#output').text(errorThrown)
+        console.log("NO YAY "+errorThrown)
+      }
+      });
+    });
+
+    $("#addCandidates").click(function(){
+      $.ajax({
+      url: 'http://localhost:3000/api/Candidates',
+      dataType: 'json',
+      type: 'post',
+      contentType: 'application/json',
+      data: $('#textarea').val(),
+      processData: false,
+      success: function( data, textStatus, jQxhr ){
+        console.log("YAY "+JSON.stringify( data ))
+        $('#output').text(JSON.stringify(data))
+      },
+      error: function( jqXhr, textStatus, errorThrown ){
+        $('#output').text(errorThrown)
+        console.log("NO YAY "+errorThrown)
+      }
+      });
+    });
+
+    $("#getCandidates").click(function(){
+      $.ajax({
+          url: "http://localhost:3000/api/Candidates"
+      }).then(function(data) {
+         console.log(data)
+         $('#output').text(JSON.stringify(data))
+      }, function(err){
+         $('#output').text(JSON.stringify(err))
+        console.log(err);
+      });
+    });
+
+});
+</script>
+</head>
+<body>
+
+
+<button id="getEcoUsers">Get EcoUsers</button>
+<button id="getCandidates">Get Candidates</button>
+<button id="addEcoUser">Create Eco User</button>
+<button>Add New Candidate</button>
+<br>
+<textarea id="input" placeholder="Insert data" rows="8" cols="80"></textarea>
+<textarea id="output" rows="8" cols="80" placeholder="Response"></textarea>
+
+
+</body>
+</html>
